@@ -62,17 +62,17 @@ key = [
 newMessage = ""
 listeMessage = []
 for i in key:
-    for element in message:
-        listeMessage.append(element)
-        placePhrase = listeMessage.index(element)
-        if element in alphabet:
+    for word in message:
+        listeMessage.append(word)
+        placePhrase = listeMessage.index(word)
+        if word in alphabet:
             # longueur = len(listeMessage)
-            place = alphabet.index(element)
+            place = alphabet.index(word)
             nouvelleLettre = (
                 place - i
             ) % 26  # remplacer la lettre par la meme +key dans la l'alphabet
             newMessage += alphabet[nouvelleLettre]
         else:
-            newMessage += element
+            newMessage += "\n" + word
 
 print(newMessage)
