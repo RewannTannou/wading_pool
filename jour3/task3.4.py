@@ -6,4 +6,4 @@ textFinal = ""
 #   textFinal = textFinal + letter
 
 textFinal = "".join([word[0] for word in wordList])
-print(textFinal)
+print(textFinal.capitalize())
