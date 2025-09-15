@@ -28,7 +28,10 @@ def func3(s: str, n: int):
 
 
 def passcheck(fun, n: int, s: str):
-    return fun(s, n)
+    try:
+        return fun(s, n)
+    except TypeError as e:
+        print(f"Erreur de type dans la fonction {e}")
 
 
 passcheck(func1, 16, "mysecretpassword")
