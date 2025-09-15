@@ -1,8 +1,8 @@
 def func1(s: str, n: int):
     if len(s) == n:
-        print("True")
+        return True
     else:
-        print("False")
+        return False
 
 
 def func2(s: str, n: int):
@@ -11,9 +11,9 @@ def func2(s: str, n: int):
         if not (char.isalnum()):
             compte += 1
     if compte == n:
-        print("True")
+        return True
     else:
-        print("False")
+        return False
 
 
 def func3(s: str, n: int):
@@ -22,9 +22,9 @@ def func3(s: str, n: int):
         if char.isdigit():
             compte += 1
     if compte == n:
-        print("True")
+        return True
     else:
-        print("False")
+        return False
 
 
 def passcheck(fun, n: int, s: str):
@@ -34,6 +34,6 @@ def passcheck(fun, n: int, s: str):
         print(f"Erreur de type dans la fonction {e}")
 
 
-passcheck(func1, 16, "mysecretpassword")
-passcheck(func2, 3, "mysecretpassword")
-passcheck(func3, 1, "mysecretpassword")
+print(passcheck(func1, 16, "mysecretpassword"))
+print(passcheck(func2, 3, "mysecretpassword"))
+print(passcheck(func3, 1, "mysecretpassword"))
