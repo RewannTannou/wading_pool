@@ -124,7 +124,7 @@ def pendu():
     # affichage final
     print(stages[len(wrong_guessed)])
     if set(word) == correct_guessed:
-        print(f"Bravo, vous avez trouvé le mot : {word}")  #
+        print(f"Bravo, vous avez trouvé le mot : {word}")
     else:
         print(f"Looser 🤪! Le mot était : {word}")
 
