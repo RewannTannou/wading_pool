@@ -3,8 +3,9 @@ from english_words import (
     get_english_words_set,
 )
 
+
 # étapes du pendu
-stages = [
+etapes = [
     """
      ------
      |    |
@@ -87,13 +88,13 @@ def pendu():
     word = get_random_word()
     correct_guessed = set()
     wrong_guessed = set()
-    max_attempts = len(stages) - 1
+    max_attempts = len(etapes) - 1
 
     print("Bienvenue dans le jeu du Pendu !")
-
+    print("Le mot a trouvé à", len(word), "lettres")
     # continue tant qu’il reste des essais et que le mot n’est pas trouvé
     while len(wrong_guessed) < max_attempts and set(word) != correct_guessed:
-        print(stages[len(wrong_guessed)])  # affiche l’état actuel du pendu
+        print(etapes[len(wrong_guessed)])  # affiche l’état actuel du pendu
         print(
             display_word(word, correct_guessed)
         )  # affiche le mot avec les lettres découvertes
@@ -122,7 +123,7 @@ def pendu():
             print(f"Raté ! Il vous reste {max_attempts - len(wrong_guessed)} essais.")
 
     # affichage final
-    print(stages[len(wrong_guessed)])
+    print(etapes[len(wrong_guessed)])
     if set(word) == correct_guessed:
         print(f"Bravo, vous avez trouvé le mot : {word}")
     else:
