@@ -371,6 +371,7 @@ texte = input("rentrez un texte dans la langue que vous voulez: ")
 compteurDeLettre = 0
 dictionaireDeLettre = {}
 texte = texte.replace(" ", "").lower()
+
 for letter in texte:
     compteurDeLettre += 1
 
@@ -398,7 +399,6 @@ def distance(langue):
 
 
 def detectLangue():
-    freqs: dict = frequenceDeLettre
     langues = set()  # col
 
     for (

@@ -42,7 +42,7 @@ while running:
     # Dessiner tout
     Drawer.draw_Background()
     Drawer.draw_hangman(game.erreurs)
-
+    Drawer.draw_BestScore()
     mot_affiche = font_main.render(game.get_word(), True, (255, 255, 255))
     fenetre.blit(mot_affiche, (150, 450))
 

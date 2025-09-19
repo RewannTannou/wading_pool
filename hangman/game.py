@@ -1,5 +1,6 @@
 import os
 from random import choice
+from unidecode import unidecode
 
 
 class Game:
@@ -11,7 +12,7 @@ class Game:
     def load_word(self):
         with open(self.mots_file, "r", encoding="utf8") as f:
             lines = f.readlines()
-        return choice(lines).strip()
+        return unidecode(choice(lines).strip())
 
     def resetVar(self):
         self.mot = self.load_word()

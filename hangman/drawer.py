@@ -1,4 +1,5 @@
 import pygame
+from score_gestion import ScoreManager
 
 BLANC = (255, 255, 255)
 ROUGE = (200, 50, 50)
@@ -65,3 +66,13 @@ class Drawer:
             lettre_surf = self.font_small.render(lettre.upper(), True, ROUGE)
             self.fenetre.blit(lettre_surf, (zone_lettres.x + 10, lettre_y))
             lettre_y += 30
+
+    def draw_BestScore(self):
+        score = ScoreManager().get_best_score()
+        if score is None:
+            texte = self.font_main.render("Aucun score enregistré", True, BLANC)
+        else:
+            texte = self.font_main.render(
+                f"Le meilleur score est : {score}", True, BLANC
+            )
+        self.fenetre.blit(texte, (450, 10))
